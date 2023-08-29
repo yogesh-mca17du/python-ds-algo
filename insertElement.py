@@ -1,17 +1,17 @@
-def insertElement(lst,element,indx=0):
-    '''
-       Objective : Insert an elemnt in sorted list
+def insert_element(lst, element, index=0):
+    """
+       Objective : Insert an element in sorted list
        Input Parameter : lst - Our sorted list
-                         indx - Represents index of list elements
+                         index - Represents index of list elements
                          element -
 
 
-    '''
-    if(element<lst[indx]):
-        lst.insert(indx,element)
-    elif(lst[indx]<= element and lst[indx+1] > element):
-        lst.insert(indx+1,element)
-    elif(element >lst[len(lst)-1]):
-        lst.insert(len(lst),element)      
+    """
+    if element < lst[index]:
+        lst.insert(index, element)
+    elif lst[index] <= element < lst[index + 1]:
+        lst.insert(index + 1, element)
+    elif element > lst[len(lst) - 1]:
+        lst.insert(len(lst), element)
     else:
-        insertElement(lst,element,indx+1)
+        insert_element(lst, element, index + 1)
